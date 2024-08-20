@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "seven-tray"
-#define MyAppVersion "1.0"
+#define MyAppVersion "2.0"
 #define MyAppPublisher "thesleepiestdev"
 #define MyAppURL "https://github.com/thesleepiestdev"
 #define MyAppExeName "seven-tray.exe"
@@ -25,7 +25,7 @@ AllowNoIcons=yes
 ;PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputBaseFilename=mysetup
-SetupIconFile=C:\Users\suki\Documents\GitHub\seven-tray\seven-tray\Resources\vol-66-100.ico
+SetupIconFile=C:\Users\suki\Documents\GitHub\seven-tray\seven-tray\Resources\100-vol-66-100.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -35,7 +35,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 Source: "C:\Users\suki\Documents\GitHub\seven-tray\seven-tray\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\suki\Downloads\adjust_get_current_system_volume_vista_plus.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\suki\Documents\GitHub\seven-tray\seven-tray\Resources\adjust_get_current_system_volume_vista_plus.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

@@ -63,9 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
-        Friend ReadOnly Property vol_0() As System.Drawing.Icon
+        Friend ReadOnly Property _100_net_eth_ok() As System.Drawing.Icon
             Get
-                Dim obj As Object = ResourceManager.GetObject("vol_0", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_100_net_eth_ok", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -73,9 +73,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
-        Friend ReadOnly Property vol_1_32() As System.Drawing.Icon
+        Friend ReadOnly Property _100_net_wifi_ok_5() As System.Drawing.Icon
             Get
-                Dim obj As Object = ResourceManager.GetObject("vol_1_32", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_100_net_wifi_ok_5", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -83,9 +83,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
-        Friend ReadOnly Property vol_33_65() As System.Drawing.Icon
+        Friend ReadOnly Property _100_vol_0() As System.Drawing.Icon
             Get
-                Dim obj As Object = ResourceManager.GetObject("vol_33_65", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_100_vol_0", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -93,9 +93,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
-        Friend ReadOnly Property vol_66_100() As System.Drawing.Icon
+        Friend ReadOnly Property _100_vol_1_32() As System.Drawing.Icon
             Get
-                Dim obj As Object = ResourceManager.GetObject("vol_66_100", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_100_vol_1_32", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -103,9 +103,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
-        Friend ReadOnly Property vol_muted() As System.Drawing.Icon
+        Friend ReadOnly Property _100_vol_33_65() As System.Drawing.Icon
             Get
-                Dim obj As Object = ResourceManager.GetObject("vol_muted", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_100_vol_33_65", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
@@ -113,9 +113,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         '''</summary>
-        Friend ReadOnly Property vol_unavailab() As System.Drawing.Icon
+        Friend ReadOnly Property _100_vol_66_100() As System.Drawing.Icon
             Get
-                Dim obj As Object = ResourceManager.GetObject("vol_unavailab", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_100_vol_66_100", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property

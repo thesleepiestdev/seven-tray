@@ -23,8 +23,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.iconvolume = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.volumerclickmenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.BTNOpenVolumeMixer = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -33,7 +33,13 @@ Partial Class Form1
         Me.BTNSounds = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BTNVolumeControlOptions = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.iconnetwork = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.networkrclickmenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.BTNTroubleshootProblems = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTNNetworkAndSharingCenter = New System.Windows.Forms.ToolStripMenuItem()
         Me.volumerclickmenu.SuspendLayout()
+        Me.networkrclickmenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'iconvolume
@@ -41,11 +47,6 @@ Partial Class Form1
         Me.iconvolume.ContextMenuStrip = Me.volumerclickmenu
         Me.iconvolume.Text = "The Audio Service is not running."
         Me.iconvolume.Visible = True
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 60000
         '
         'volumerclickmenu
         '
@@ -93,6 +94,35 @@ Partial Class Form1
         Me.BTNVolumeControlOptions.Size = New System.Drawing.Size(198, 22)
         Me.BTNVolumeControlOptions.Text = "Volume control options"
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 60000
+        '
+        'iconnetwork
+        '
+        Me.iconnetwork.ContextMenuStrip = Me.networkrclickmenu
+        Me.iconnetwork.Icon = CType(resources.GetObject("iconnetwork.Icon"), System.Drawing.Icon)
+        Me.iconnetwork.Text = "Network - Internet access"
+        '
+        'networkrclickmenu
+        '
+        Me.networkrclickmenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTNTroubleshootProblems, Me.BTNNetworkAndSharingCenter})
+        Me.networkrclickmenu.Name = "networkrclickmenu"
+        Me.networkrclickmenu.Size = New System.Drawing.Size(256, 48)
+        '
+        'BTNTroubleshootProblems
+        '
+        Me.BTNTroubleshootProblems.Name = "BTNTroubleshootProblems"
+        Me.BTNTroubleshootProblems.Size = New System.Drawing.Size(255, 22)
+        Me.BTNTroubleshootProblems.Text = "Troubleshoot problems"
+        '
+        'BTNNetworkAndSharingCenter
+        '
+        Me.BTNNetworkAndSharingCenter.Name = "BTNNetworkAndSharingCenter"
+        Me.BTNNetworkAndSharingCenter.Size = New System.Drawing.Size(255, 22)
+        Me.BTNNetworkAndSharingCenter.Text = "Open Network and Sharing Center"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -107,6 +137,7 @@ Partial Class Form1
         Me.Text = "seven-tray main"
         Me.TransparencyKey = System.Drawing.Color.Black
         Me.volumerclickmenu.ResumeLayout(False)
+        Me.networkrclickmenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -120,5 +151,9 @@ Partial Class Form1
     Friend WithEvents BTNSounds As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BTNVolumeControlOptions As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents iconnetwork As System.Windows.Forms.NotifyIcon
+    Friend WithEvents networkrclickmenu As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents BTNTroubleshootProblems As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BTNNetworkAndSharingCenter As System.Windows.Forms.ToolStripMenuItem
 
 End Class

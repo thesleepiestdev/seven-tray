@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+Output
+seven-tray/Resources/adjust_get_current_system_volume_vista_plus.exe

@@ -126,4 +126,35 @@
   <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
+  <metadata name="iconnetwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>372, 17</value>
+  </metadata>
+  <metadata name="networkrclickmenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>491, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="iconnetwork.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAECAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAADX///9pAAAAcAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAASwAA
+        AAAAAAAAAAAAAAAAAAAAAABY////sAAAAK3//////////////////////////////////////////wAA
+        AIAAAAAAAAAAAAAAAAAAAAAAAAAApf////8AAADAAAAAgAAAAIAAAACA//////////8AAACAAAAAgAAA
+        AIAAAACAAAAAgAAAAEsAAAAAAAAAAAAAAMD/////f39/////////////////////////////////////
+        //////////////////8AAACAAAAAAAAAAAAAAADA/////wAAAKYAAABNAAAATQAAAE0AAABNAAAATQAA
+        AE0AAABNAAAATQAAAE3/////AAAAgAAAAAAAAAAAAAAAwP////8AAACmAAAATQAAAE0AAABNAAAATQAA
+        AE0AAABNAAAATQAAAE0AAABN/////wAAAIAAAAAAAAAAAAAAAMD/////BAQEqAkJCU8BAQFNAAAATQAA
+        AE0AAABNAAAATQAAAE0AAABNAAAATf////8AAACAAAAAAAAAAAAAAADgf39//wUFBdYuLi5YLCwsWB4e
+        HlQLCwtQAAAATQAAAE0AAABNAAAATQAAAE3/////AAAAgAAAAEsAAACAAAAAwH9/f/8UFBSwFBQUsCMj
+        I5BKSkphSkpKYT8/P10jIyNVBgYGTgAAAE0AAABN/////wAAAIAAAACA////////////////////////
+        //8cHBy0YWFhaWFhYWlhYWFpYWFhaV1dXWhCQkJeGhoaU/////8AAACAAAAAgP////+AgID/gICA/4CA
+        gP//////KioqvISEhHiEhIR4hISEeISEhHiEhIR4hISEeISEhHj/////AAAAgAAAAID/////gICA////
+        //+AgID//////0BAQMqwsLCUsLCwlLCwsJSwsLCUsLCwlLCwsJSwsLCU/////wAAAIAAAACA/////4CA
+        gP//////gICA//////9/f3////////////////////////////////////////////8AAACAAAAAgP//
+        //+AgID//////4CAgP//////AAAAwAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAASwAA
+        AEsAAACAAAAAgP////8AAACAAAAAgAAAAEsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAEsAAACAAAAASwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAwAMAAMADAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAB/wAAx/8AAA==
+</value>
+  </data>
 </root>
