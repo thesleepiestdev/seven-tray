@@ -9,6 +9,9 @@
                 iconnetwork.Icon = My.Resources._100_net_wifi_ok_5
             End If
         End If
+        If My.Settings.ActionCenterEnabled = True Then
+            iconactioncenter.Visible = True
+        End If
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
@@ -27,37 +30,36 @@
         Process.Start("sndvol")
     End Sub
     Private Sub UpdateVolumeIcon()
-        Dim oProcess As New Process()
-        Dim oStartInfo As New ProcessStartInfo(Application.StartupPath & "\adjust_get_current_system_volume_vista_plus.exe")
-        oStartInfo.UseShellExecute = False
-        oStartInfo.RedirectStandardOutput = True
-        oStartInfo.CreateNoWindow = True
-        oProcess.StartInfo = oStartInfo
         Try
+            Dim oProcess As New Process()
+            Dim oStartInfo As New ProcessStartInfo(Application.StartupPath & "\adjust_get_current_system_volume_vista_plus.exe")
+            oStartInfo.UseShellExecute = False
+            oStartInfo.RedirectStandardOutput = True
+            oStartInfo.CreateNoWindow = True
+            oProcess.StartInfo = oStartInfo
             oProcess.Start()
+            Dim sOutput As String
+            Using oStreamReader As System.IO.StreamReader = oProcess.StandardOutput
+                sOutput = oStreamReader.ReadToEnd()
+            End Using
+
+            Dim volume As Integer
+            If Integer.TryParse(sOutput, volume) Then
+                Select Case volume
+                    Case 0
+                        iconvolume.Icon = My.Resources._100_vol_0
+                    Case 1 To 32
+                        iconvolume.Icon = My.Resources._100_vol_1_32
+                    Case 33 To 65
+                        iconvolume.Icon = My.Resources._100_vol_33_65
+                    Case 66 To 100
+                        iconvolume.Icon = My.Resources._100_vol_66_100
+                End Select
+                iconvolume.Text = "Speakers: " & volume & "%"
+            End If
         Catch ex As Exception
+            iconvolume.Text = "The Audio Service is not running."
         End Try
-
-
-        Dim sOutput As String
-        Using oStreamReader As System.IO.StreamReader = oProcess.StandardOutput
-            sOutput = oStreamReader.ReadToEnd()
-        End Using
-
-        Dim volume As Integer
-        If Integer.TryParse(sOutput, volume) Then
-            Select Case volume
-                Case 0
-                    iconvolume.Icon = My.Resources._100_vol_0
-                Case 1 To 32
-                    iconvolume.Icon = My.Resources._100_vol_1_32
-                Case 33 To 65
-                    iconvolume.Icon = My.Resources._100_vol_33_65
-                Case 66 To 100
-                    iconvolume.Icon = My.Resources._100_vol_66_100
-            End Select
-            iconvolume.Text = "Speakers: " & volume & "%"
-        End If
     End Sub
 
     Private Sub iconvolume_Click(ByVal sender As Object, ByVal e As MouseEventArgs) Handles iconvolume.Click
@@ -113,8 +115,14 @@
             Else
                 iconnetwork.Visible = False
             End If
+            If My.Settings.ActionCenterEnabled = True Then
+                iconactioncenter.Visible = True
+            Else
+                iconactioncenter.Visible = False
+            End If
         End If
     End Sub
+
 
     Private Sub iconnetwork_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles iconnetwork.MouseClick
         If e.Button = MouseButtons.Left Then
@@ -127,5 +135,22 @@
     End Sub
     Private Sub btnnetworkandsharingcenter_click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNNetworkAndSharingCenter.Click
         Process.Start("control.exe", "/name Microsoft.NetworkAndSharingCenter")
+    End Sub
+
+
+    Private Sub iconactioncenter_MouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles iconactioncenter.MouseClick
+        If e.Button = MouseButtons.Left Then
+            Process.Start("control.exe", "/name Microsoft.ActionCenter")
+        End If
+    End Sub
+    Private Sub BTNOpenActionCenter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNOpenActionCenter.Click
+        Process.Start("control.exe", "/name Microsoft.ActionCenter")
+    End Sub
+    Private Sub BTNTroubleshootAProblem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNTroubleshootAProblem.Click
+        Process.Start("explorer", "shell:::{26EE0668-A00A-44D7-9371-BEB064C98683}\0\::{C58C4893-3BE0-4B45-ABB5-A63E4B8C8651}")
+    End Sub
+
+    Private Sub BTNOpenWindowsUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNOpenWindowsUpdate.Click
+        Process.Start("control", "/name Microsoft.WindowsUpdate")
     End Sub
 End Class

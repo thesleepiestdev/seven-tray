@@ -66,6 +66,9 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\100-vol-33-65.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -135,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -144,27 +148,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vol-0.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vol-1-32.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vol-33-65.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vol-66-100.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vol-muted.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vol-unavailab.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\adjust_get_current_system_volume_vista_plus.exe" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -189,12 +172,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\net-eth-ok.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\net-wifi-ok-5.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\100-net-eth-ok.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +188,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\100-vol-66-100.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100-action-center-ok.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

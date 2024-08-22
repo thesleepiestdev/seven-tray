@@ -38,8 +38,15 @@ Partial Class Form1
         Me.networkrclickmenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.BTNTroubleshootProblems = New System.Windows.Forms.ToolStripMenuItem()
         Me.BTNNetworkAndSharingCenter = New System.Windows.Forms.ToolStripMenuItem()
+        Me.iconactioncenter = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.actioncenterrclickmenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.BTNOpenActionCenter = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BTNTroubleshootAProblem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BTNOpenWindowsUpdate = New System.Windows.Forms.ToolStripMenuItem()
         Me.volumerclickmenu.SuspendLayout()
         Me.networkrclickmenu.SuspendLayout()
+        Me.actioncenterrclickmenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'iconvolume
@@ -123,13 +130,47 @@ Partial Class Form1
         Me.BTNNetworkAndSharingCenter.Size = New System.Drawing.Size(255, 22)
         Me.BTNNetworkAndSharingCenter.Text = "Open Network and Sharing Center"
         '
+        'iconactioncenter
+        '
+        Me.iconactioncenter.ContextMenuStrip = Me.actioncenterrclickmenu
+        Me.iconactioncenter.Icon = CType(resources.GetObject("iconactioncenter.Icon"), System.Drawing.Icon)
+        Me.iconactioncenter.Text = "Action Center - No current issues detected"
+        '
+        'actioncenterrclickmenu
+        '
+        Me.actioncenterrclickmenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTNOpenActionCenter, Me.ToolStripSeparator3, Me.BTNTroubleshootAProblem, Me.BTNOpenWindowsUpdate})
+        Me.actioncenterrclickmenu.Name = "actioncenterrclickmenu"
+        Me.actioncenterrclickmenu.Size = New System.Drawing.Size(201, 76)
+        '
+        'BTNOpenActionCenter
+        '
+        Me.BTNOpenActionCenter.Name = "BTNOpenActionCenter"
+        Me.BTNOpenActionCenter.Size = New System.Drawing.Size(200, 22)
+        Me.BTNOpenActionCenter.Text = "Open Action Center"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(197, 6)
+        '
+        'BTNTroubleshootAProblem
+        '
+        Me.BTNTroubleshootAProblem.Name = "BTNTroubleshootAProblem"
+        Me.BTNTroubleshootAProblem.Size = New System.Drawing.Size(200, 22)
+        Me.BTNTroubleshootAProblem.Text = "Troubleshoot a problem"
+        '
+        'BTNOpenWindowsUpdate
+        '
+        Me.BTNOpenWindowsUpdate.Name = "BTNOpenWindowsUpdate"
+        Me.BTNOpenWindowsUpdate.Size = New System.Drawing.Size(200, 22)
+        Me.BTNOpenWindowsUpdate.Text = "Open Windows Update"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(0, 0)
-        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.ShowIcon = False
@@ -138,6 +179,7 @@ Partial Class Form1
         Me.TransparencyKey = System.Drawing.Color.Black
         Me.volumerclickmenu.ResumeLayout(False)
         Me.networkrclickmenu.ResumeLayout(False)
+        Me.actioncenterrclickmenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -155,5 +197,11 @@ Partial Class Form1
     Friend WithEvents networkrclickmenu As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents BTNTroubleshootProblems As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BTNNetworkAndSharingCenter As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents iconactioncenter As System.Windows.Forms.NotifyIcon
+    Friend WithEvents actioncenterrclickmenu As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents BTNOpenActionCenter As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents BTNTroubleshootAProblem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BTNOpenWindowsUpdate As System.Windows.Forms.ToolStripMenuItem
 
 End Class
