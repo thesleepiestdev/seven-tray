@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "seven-tray"
-#define MyAppVersion "2.0"
+#define MyAppVersion "3.0"
 #define MyAppPublisher "thesleepiestdev"
 #define MyAppURL "https://github.com/thesleepiestdev"
 #define MyAppExeName "seven-tray.exe"
